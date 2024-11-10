@@ -3,9 +3,8 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         HStack{
-            DayForecast(day: "Mon",isRainy: false ,high: 25, low: 13)
-            
-            DayForecast(day: "Tue",isRainy: true ,high: 22, low: 15)
+            DayForecast(day: "Mon",isRainy: false ,high: 35, low: 13)
+            DayForecast(day: "Tue",isRainy: true ,high: 36, low: 15)
         }
     }
 }
@@ -36,6 +35,14 @@ struct DayForecast: View {
         }
     }
     
+    var temperatureColor: Color {
+        if high > 35 {
+            return Color.red
+        } else {
+            return Color.black
+        }
+    }
+    
     var body: some View {
         VStack {
             Text(day)
@@ -46,6 +53,7 @@ struct DayForecast: View {
                 .padding(5)
             Text("High: \(high)")
                 .fontWeight(Font.Weight.semibold)
+                .foregroundStyle(temperatureColor)
             Text("Low: \(low)")
                 .fontWeight(Font.Weight.medium)
                 .foregroundStyle(Color.secondary)

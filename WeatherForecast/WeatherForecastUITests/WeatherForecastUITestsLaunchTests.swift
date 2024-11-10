@@ -1,13 +1,13 @@
 //
-//  helloSwiftUIUITestsLaunchTests.swift
-//  helloSwiftUIUITests
+//  WeatherForecastUITestsLaunchTests.swift
+//  WeatherForecastUITests
 //
 //  Created by Xabi on 10/11/24.
 //
 
 import XCTest
 
-final class helloSwiftUIUITestsLaunchTests: XCTestCase {
+final class WeatherForecastUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
